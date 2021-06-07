@@ -1,0 +1,103 @@
+.Sort {
+  margin-bottom: 50px;
+
+  .title {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 40px;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 555px;
+    position: relative;
+
+    input {
+      flex: 1;
+      height: 36px;
+      padding: 0 12px 0 10px;
+    }
+
+    &-icon {
+      position: absolute;
+      right: 12px;
+      cursor: pointer;
+    }
+  }
+
+  .detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .sort {
+      min-width: 210px;
+      height: 36px;
+      background: #353535;
+      border-radius: 2px;
+      margin-right: 20px;
+    }
+
+    .sort:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .common {
+    display: flex;
+    align-items: center;
+
+    .date {
+      display: flex;
+      align-items: center;
+      width: 210px;
+      position: relative;
+      margin-right: 20px;
+
+      input {
+        flex: 1;
+        height: 36px;
+      }
+
+      .date-icon {
+        position: absolute;
+        right: 12px;
+      }
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+
+      input {
+        width: 95px;
+        height: 36px;
+      }
+
+      span {
+        margin: 0 8px;
+      }
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+
+      .accept {
+        width: 180px;
+        height: 36px;
+      }
+    }
+  }
+}

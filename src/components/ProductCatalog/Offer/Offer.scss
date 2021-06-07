@@ -1,0 +1,26 @@
+.Offer {
+  .title {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .more {
+    text-align: center;
+    margin-top: 40px;
+
+    .info {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      color: #14b0ba;
+    }
+  }
+}

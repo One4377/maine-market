@@ -1,9 +1,9 @@
-import './App.css';
+import { Catalog } from "./components/Сatalog"
 
 function App() {
   return (
     <div className="App">
-      123
+      <Catalog />
     </div>
   );
 }

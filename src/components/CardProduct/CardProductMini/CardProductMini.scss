@@ -1,0 +1,91 @@
+.CardProductMini {
+  width: 268px;
+  background: #2e2e2e;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 2px;
+  margin: 0 20px 20px 0;
+
+  .image {
+    padding: 15px 44px 30px 44px;
+    img {
+    }
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0 0 20px;
+    margin-bottom: 20px;
+
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+
+      span {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.4);
+        margin-left: 4px;
+      }
+    }
+
+    .icons {
+      margin-right: auto;
+      
+    }
+  }
+
+  hr {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 228px;
+    height: 1px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    margin-top: 15px;
+
+    .buy,
+    .sell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #14b0ba;
+      border-radius: 2px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .sell {
+      background: #f19c38;
+    }
+
+    .price {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-weight: bold;
+      font-size: 18px;
+
+      span {
+        font-weight: 300;
+        font-size: 10px;
+        text-decoration-line: underline;
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+}

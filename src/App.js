@@ -1,12 +1,15 @@
+import { Route } from "react-router-dom";
+
 import { Catalog } from "./components/Сatalog";
 import { CardProductFull } from "./components/CardProduct";
-import { Route } from "react-router-dom";
+import { Auth } from "./components/Auth/";
 
 function App() {
   return (
     <div className="App">
-      <Route exact path="/catalog" component={Catalog} />
-      <Route exact path="/card-product" component={CardProductFull} />
+      <Route  path="/catalog" component={Catalog} />
+      <Route  path="/card-product" component={CardProductFull} />
+      <Route  path="/" component={Auth} />
     </div>
   );
 }

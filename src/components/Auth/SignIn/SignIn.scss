@@ -1,0 +1,86 @@
+.SignIn {
+  padding: 30px;
+  background: #2e2e2e;
+  width: 385px;
+
+  .title {
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .field {
+    position: relative;
+    margin-bottom: 15px;
+
+    input {
+      width: 100%;
+      padding: 0 10px 0 35px;
+    }
+
+    .icon {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  }
+
+  .field:last-child {
+    margin-bottom: 20px;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .checkbox-field {
+      font-weight: normal;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    a {
+      color: #14b0ba;
+      font-weight: normal;
+      font-size: 12px;
+    }
+  }
+
+  .btn-total {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .primary {
+      height: 36px;
+      flex: 1;
+      margin-bottom: 15px;
+    }
+
+    .rate {
+      height: 36px;
+      flex: 1;
+    }
+  }
+
+  .more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      font-weight: normal;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 15px;
+    }
+
+    .links {
+      width: 170px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

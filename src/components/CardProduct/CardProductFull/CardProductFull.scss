@@ -1,0 +1,152 @@
+.CardProductFull {
+  padding: 40px 40px 40px 20px;
+
+  .top {
+    display: flex;
+
+    .image {
+      margin-right: 20px;
+
+      img {
+        width: 325px;
+        height: 325px;
+        margin: 0 0 40px 0;
+      }
+
+      .feature {
+        margin-top: 40px;
+
+        .info {
+          font-weight: normal;
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+        .Characteristics {
+          padding: 0;
+        }
+      }
+    }
+
+    .detail {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .title {
+        margin-bottom: 6px;
+
+        .name {
+          font-weight: normal;
+          font-size: 24px;
+        }
+
+        .sub-title {
+          font-weight: 300;
+          font-size: 18px;
+          color: rgba(255, 255, 255, 0.4);
+        }
+      }
+
+      .about {
+        display: flex;
+        justify-content: space-between;
+
+        .column {
+          .money {
+            display: flex;
+            margin-bottom: 15px;
+
+            .price {
+              font-weight: bold;
+              font-size: 24px;
+              color: #14b0ba;
+            }
+
+            span {
+              font-weight: normal;
+              font-size: 10px;
+              color: rgba(255, 255, 255, 0.4);
+            }
+          }
+
+          .raiting {
+            span {
+              font-weight: normal;
+              font-size: 14px;
+              color: #14b0ba;
+              margin-bottom: 10px;
+            }
+          }
+
+          .btn-wrapp {
+            display: flex;
+            flex-direction: column;
+
+            .primary {
+              width: 180px;
+              height: 32px;
+              margin-bottom: 12px;
+            }
+
+            .rate {
+              width: 180px;
+              height: 32px;
+            }
+          }
+        }
+      }
+
+      hr {
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        height: 1px;
+        width: 100%;
+        margin: 20px 0;
+      }
+
+      .parameter {
+        margin-bottom: 30px;
+
+        .argument {
+          font-weight: normal;
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+        .Characteristics {
+          padding: 0;
+        }
+      }
+
+      .description {
+        .specification {
+          font-weight: normal;
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-weight: 300;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.4);
+        }
+      }
+    }
+  }
+
+  .btn-total {
+    display: flex;
+    justify-content: flex-end;
+
+    .primary {
+      width: 180px;
+      height: 36px;
+      margin-left: 20px;
+    }
+
+    .rate {
+      width: 180px;
+      height: 36px;
+    }
+  }
+}

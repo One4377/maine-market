@@ -37,7 +37,7 @@ function SignUp() {
           Войти
         </Button>
         <Button variant="rate" className="rate">
-          <Link to="/sign-in">Зарегистрироваться</Link>
+          <Link to="/auth/sign-in">Зарегистрироваться</Link>
         </Button>
       </div>
       <div className="more">

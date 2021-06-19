@@ -7,9 +7,9 @@ import { Auth } from "./components/Auth/";
 function App() {
   return (
     <div className="App">
-      <Route  path="/catalog" component={Catalog} />
-      <Route  path="/card-product" component={CardProductFull} />
-      <Route  path="/" component={Auth} />
+      <Route path="/catalog" component={Catalog} />
+      <Route path="/card-product" component={CardProductFull} />
+      <Route path="/auth" component={Auth} />
     </div>
   );
 }

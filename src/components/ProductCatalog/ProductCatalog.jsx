@@ -2,15 +2,12 @@ import React from "react";
 
 import "./ProductCatalog.scss";
 
-import { Demand, Offer } from "./index"
-
-
+import { Offer } from "./index";
 
 function ProductCatalog() {
   return (
     <div className="ProductCatalog">
-      <Offer />
-      <Demand />
+      <Offer heading="Antminer S9j" />
     </div>
   );
 }

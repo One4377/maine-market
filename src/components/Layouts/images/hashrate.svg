@@ -1,0 +1,15 @@
+<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="5.5" y="5.5" width="26" height="26" stroke="white"/>
+<path d="M12 1.14286V5" stroke="white" stroke-linecap="square"/>
+<path d="M19 1.14286V5" stroke="white" stroke-linecap="square"/>
+<path d="M25.5 1.14286V5" stroke="white" stroke-linecap="square"/>
+<path d="M12 32.1429V36" stroke="white" stroke-linecap="square"/>
+<path d="M19 32.1429V36" stroke="white" stroke-linecap="square"/>
+<path d="M25.5 32.1429V36" stroke="white" stroke-linecap="square"/>
+<path d="M35.8571 12H32" stroke="white" stroke-linecap="square"/>
+<path d="M35.8571 19H32" stroke="white" stroke-linecap="square"/>
+<path d="M35.8571 25.5H32" stroke="white" stroke-linecap="square"/>
+<path d="M4.85714 12H1" stroke="white" stroke-linecap="square"/>
+<path d="M4.85714 19H1" stroke="white" stroke-linecap="square"/>
+<path d="M4.85714 25.5H1" stroke="white" stroke-linecap="square"/>
+</svg>

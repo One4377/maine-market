@@ -1,0 +1,16 @@
+.MainLayout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__content {
+    width: calc(100% - 250px);
+    margin-left: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background-color: #282828;
+  }
+}

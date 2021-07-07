@@ -1,0 +1,31 @@
+.TabLinks {
+  a {
+    display: inline-flex;
+    min-width: 180px;
+    background-color: #2e2e2e;
+    height: 34px;
+    line-height: 34px;
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    padding: 0 8px;
+    border-left: 2px solid transparent;
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    vertical-align: middle;
+    align-items: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      border-left-color: #41b7f6;
+      color: #fff;
+    }
+  }
+
+  button {
+    margin-right: 5px;
+  }
+}

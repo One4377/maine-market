@@ -2,17 +2,18 @@ import React from "react";
 
 import "./Catalog.scss";
 
-import { ProductCatalog } from "../ProductCatalog/index"
-import { Sort } from "../Sort/index"
-
-
+import { ProductCatalog } from "../ProductCatalog";
+import { Sort } from "../Sort";
+import MainLayouts from "../Layouts/Main";
 
 function Catalog() {
   return (
-    <div className="Catalog">
-      <Sort />
-      <ProductCatalog />
-    </div>
+    <MainLayouts>
+      <div className="Catalog">
+        <Sort />
+        <ProductCatalog />
+      </div>
+    </MainLayouts>
   );
 }
 

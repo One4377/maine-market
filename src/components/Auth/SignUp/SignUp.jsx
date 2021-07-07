@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 import "./SignUp.scss";
@@ -30,7 +29,7 @@ function SignUp() {
           <Checkbox />
           Запомнить
         </div>
-        <a href="#">Я забыл пароль</a>
+        <Link to="#">Я забыл пароль</Link>
       </div>
       <div className="btn-total">
         <Button variant="primary" className="primary">
@@ -43,18 +42,18 @@ function SignUp() {
       <div className="more">
         <span>Войти через</span>
         <div className="links">
-          <a href="#">
+          <Link to="#">
             <FacebookIcon />
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <LinkedInIcon />
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <GoogleIcon />
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <TelegramIcon />
-          </a>
+          </Link>
         </div>
       </div>
     </form>

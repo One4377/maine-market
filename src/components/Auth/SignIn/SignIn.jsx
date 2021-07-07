@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 import "./SignIn.scss";
 
@@ -10,11 +10,35 @@ import { ReactComponent as LinkedInIcon } from "../images/linkedIn.svg";
 import { ReactComponent as FacebookIcon } from "../images/facebook.svg";
 
 import Button from "../../Button/Button";
+import Checkbox from "../../Checkbox/Checkbox";
 
 function SignIn() {
   return (
     <form className="SignIn">
       <div className="title">Зарегистрироваться</div>
+      <div className="more">
+        <span>Войти через</span>
+        <div className="links">
+          <Link to="#">
+            <FacebookIcon />
+          </Link>
+          <Link to="#">
+            <LinkedInIcon />
+          </Link>
+          <Link to="#">
+            <GoogleIcon />
+          </Link>
+          <Link to="#">
+            <TelegramIcon />
+          </Link>
+        </div>
+      </div>
+      <div className="field">
+        <input className="about" type="text" placeholder="Имя" />
+      </div>
+      <div className="field">
+        <input className="about" type="text" placeholder="Фамилия" />
+      </div>
       <div className="field">
         <input type="email" placeholder="email" />
         <EmailIcon className="icon" />
@@ -23,29 +47,26 @@ function SignIn() {
         <input type="password" placeholder="Пароль" />
         <PasswordIcon className="icon" />
       </div>
+      <div className="field">
+        <input type="password" placeholder="Подтвердить пароль" />
+        <PasswordIcon className="icon" />
+      </div>
+
+      <div className="info">
+        <Checkbox />
+        <div className="checkbox-field">
+          Я принимаю условия
+          <Link to="#">Пользовательского соглашения</Link>
+        </div>
+      </div>
 
       <div className="btn-total">
-        <Button variant="primary" className="primary">
+        <Button variant="rate" className="rate">
           Зарегистрироваться
         </Button>
       </div>
-      <div className="more">
-        <span>Войти через</span>
-        <div className="links">
-          <a href="#">
-            <FacebookIcon />
-          </a>
-          <a href="#">
-            <LinkedInIcon />
-          </a>
-          <a href="#">
-            <GoogleIcon />
-          </a>
-          <a href="#">
-            <TelegramIcon />
-          </a>
-        </div>
-      </div>
+
+      <Link className="enter" to="/auth/sign-up">У меня уже есть доступ, войти</Link>
     </form>
   );
 }

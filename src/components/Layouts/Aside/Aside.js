@@ -17,7 +17,7 @@ export default function Aside() {
           <Link className="item" to="/profile">
             Профиль
           </Link>
-          <Link className="item" tto="#">
+          <Link className="item" to="#">
             Мои товары
           </Link>
           <Link className="item" to="#">

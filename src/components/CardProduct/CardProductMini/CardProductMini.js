@@ -8,7 +8,7 @@ import MaineFerm from "./images/maine-ferm.png";
 import { ReactComponent as CaseIcon } from "./images/case.svg";
 import { ReactComponent as SellIcon } from "./images/sell.svg";
 
-import { Characteristic } from "../";
+import { Characteristic } from "..";
 import { Raiting } from "../../Raiting";
 
 function CardProductMini({ title, info, buy, sell }) {

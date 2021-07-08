@@ -1,18 +1,29 @@
-import { Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Catalog } from "./components/Сatalog";
 import { CardProductFull } from "./components/CardProduct";
-import { Auth } from "./components/Auth/";
-import { Profile } from "./components/Profile";
+import { Auth, SignIn, SignUp } from "./components/Auth/";
+import { Profile, Person } from "./components/Profile";
+import MainLayout from "./components/Layouts/Main";
 
 function App() {
   return (
-    <div className="App">
-      <Route path="/catalog" component={Catalog} />
-      <Route path="/card-product" component={CardProductFull} />
-      <Route path="/auth" component={Auth} />
-      <Route path="/profile" component={Profile} />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <MainLayout>
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/card-product" element={<CardProductFull />} />
+          <Route path="/profile" element={<Profile />}>
+            <Route path="/person" element={<Person />} />
+            <Route path="/test" element={<Person />} />
+          </Route>
+        </MainLayout>
+        <Route path="/auth" element={<Auth />}>
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

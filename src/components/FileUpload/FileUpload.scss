@@ -1,0 +1,33 @@
+.FileUpload {
+  background: #353535;
+  min-width: 270px;
+  
+
+  .filepond--wrapper {
+    background: #353535;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    height: 72px;
+
+    .filepond--credits {
+      display: none;
+    }
+
+    .filepond--drop-label {
+      background: #353535;
+      color: #fff;
+      font-size: 13px;
+      // min-width: 325px;
+    }
+
+    .filepond--label-action {
+      color: #41b7f6;
+      text-decoration: none;
+    }
+
+    .filepond--panel-center,
+    .filepond--panel-bottom,
+    .filepond--panel-root {
+      background: #353535;
+    }
+  }
+}

@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Catalog } from "./components/Сatalog";
 import { CardProductFull } from "./components/CardProduct";
 import { Auth, SignIn, SignUp } from "./components/Auth/";
-import { Profile, Person, AboutUser, Passport } from "./components/Profile";
+import { Profile, Person, AboutUser, Passport, LegalPerson, LegalContact } from "./components/Profile";
 import MainLayout from "./components/Layouts/Main";
 
 function App() {
@@ -17,6 +17,8 @@ function App() {
             <Route path="/person" element={<Person />} />
             <Route path="/about-user" element={<AboutUser />} />
             <Route path="/passport" element={<Passport />} />
+            <Route path="/legal-person" element={<LegalPerson />} />
+            <Route path="/legal-contact" element={<LegalContact />} />
           </Route>
         </MainLayout>
         <Route path="/auth" element={<Auth />}>

@@ -10,6 +10,8 @@ function Profile() {
         <NavLink to="person">Тип лица</NavLink>
         <NavLink to="about-user">Информация об учетной записи</NavLink>
         <NavLink to="passport">Паспортные данные</NavLink>
+        <NavLink to="legal-person">Информация о юридическом лице</NavLink>
+        <NavLink to="legal-contact">Контактактные данные</NavLink>
         {/* <NavLink to="#">Транзакции</NavLink> */}
       </TabLinks>
 

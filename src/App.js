@@ -4,6 +4,7 @@ import { Catalog } from "./components/Сatalog";
 import { CardProductFull } from "./components/CardProduct";
 import { Auth, SignIn, SignUp } from "./components/Auth/";
 import { Profile, Person, AboutUser, Passport, LegalPerson, LegalContact } from "./components/Profile";
+import { Wallet } from "./components/Wallet";
 import MainLayout from "./components/Layouts/Main";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/legal-person" element={<LegalPerson />} />
             <Route path="/legal-contact" element={<LegalContact />} />
           </Route>
+          <Route path="/wallet" element={<Wallet />} />
         </MainLayout>
         <Route path="/auth" element={<Auth />}>
           <Route path="/sign-in" element={<SignIn />} />

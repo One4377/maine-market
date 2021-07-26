@@ -30,10 +30,10 @@ export default function Aside() {
           </NavLink>
           <NavLink className="item" to="#">
             Лист заявок
-          </NavLink>
-          <NavLink className="item" to="#">
-            Кошелек
           </NavLink> */}
+        <NavLink className="item" to="/wallet">
+          Кошелек
+        </NavLink>
       </div>
     </div>
   );

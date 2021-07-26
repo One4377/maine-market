@@ -1,0 +1,26 @@
+.PaymentMethod {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .check {
+      margin-right: 30px;
+  }
+
+  .icon {
+    width: 160px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #353535;
+  }
+
+  .pay {
+      width: 400px;
+      height: 60px;
+      padding: 20px;
+      background: #313131;
+      font-size: 14px;
+  }
+}

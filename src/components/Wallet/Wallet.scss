@@ -1,0 +1,36 @@
+.Wallet {
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 18px;
+    margin-bottom: 45px;
+  }
+
+  .total {
+    width: 325px;
+    height: 36px;
+    background: #353535;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .content {
+    margin-top: 70px;
+
+    .payment {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .btn-actoins {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

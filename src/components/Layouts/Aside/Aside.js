@@ -1,32 +1,39 @@
 import "./Aside.scss";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import AvatarIcon from "../images/avatar.png";
 
 export default function Aside() {
   return (
     <div className="Aside">
-      <div className="close">
-        <hr />
-        <div className="items">
-          <Link className="item" to="#">
+      <div className="user">
+        <img src={AvatarIcon} alt="img" />
+        <div className="name">Savannah Nguyen</div>
+      </div>
+      <div className="total">
+        <div className="balance">Balance:</div>
+        <div className="sum">$948.55</div>
+      </div>
+      <hr />
+      <div className="items">
+        {/* <NavLink className="item" to="#">
             Добавить товар
-          </Link>
-          <Link className="item" to="/catalog">
-            Каталог
-          </Link>
-          <Link className="item" to="/profile">
-            Профиль
-          </Link>
-          <Link className="item" to="#">
+          </NavLink> */}
+        <NavLink className="item" to="/catalog">
+          Каталог
+        </NavLink>
+        <NavLink className="item" to="/profile">
+          Профиль
+        </NavLink>
+        {/* <NavLink className="item" to="#">
             Мои товары
-          </Link>
-          <Link className="item" to="#">
+          </NavLink>
+          <NavLink className="item" to="#">
             Лист заявок
-          </Link>
-          <Link className="item" to="#">
+          </NavLink>
+          <NavLink className="item" to="#">
             Кошелек
-          </Link>
-        </div>
+          </NavLink> */}
       </div>
     </div>
   );

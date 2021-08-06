@@ -1,0 +1,106 @@
+.CategoryGoods {
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .main {
+    display: flex;
+  }
+
+  .column {
+    margin-right: 40px;
+    width: 325px;
+
+    .ReactSelect__control {
+      width: 325px;
+      margin-bottom: 15px;
+    }
+
+    .ReactSelect__menu {
+      width: 325px;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    .feature {
+      margin-top: 40px;
+
+      .info {
+        margin-bottom: 20px;
+      }
+
+      .Characteristics {
+        padding: 0;
+      }
+    }
+
+    hr {
+      margin-top: 40px;
+    }
+  }
+
+  .options {
+    .star {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .condition {
+        margin-left: 20px;
+      }
+    }
+
+    .star:last-child {
+      margin-bottom: 40px;
+    }
+
+    .settings {
+      display: flex;
+      flex-direction: column;
+      width: 325px;
+      margin: 40px 0;
+
+      input {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .wrapp {
+        display: flex;
+
+        .ReactSelect__control {
+          height: 36px;
+          margin-right: 15px;
+
+          .ReactSelect__value-container {
+            height: 36px;
+          }
+        }
+      }
+    }
+
+    .about {
+      padding: 20px;
+      background: #353535;
+      border-radius: 2px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .FileUpload {
+      width: 245px;
+    }
+  }
+  .btn-actoins {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -16,9 +16,9 @@ export default function Aside() {
       </div>
       <hr />
       <div className="items">
-        {/* <NavLink className="item" to="#">
+        <NavLink className="item" to="/add-product">
             Добавить товар
-          </NavLink> */}
+          </NavLink>
         <NavLink className="item" to="/catalog">
           Каталог
         </NavLink>

@@ -1,11 +1,13 @@
 import "./AddProduct.scss";
 
-import { CategoryGoods } from "./";
+import { Outlet } from "react-router-dom";
 
 function AddProduct() {
-  return <div className="AddProduct">
-      <CategoryGoods />
-  </div>;
+  return (
+    <div className="AddProduct">
+      <Outlet />
+    </div>
+  );
 }
 
 export default AddProduct;

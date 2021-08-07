@@ -1,5 +1,6 @@
 import "./CategoryGoods.scss";
 
+import { Link } from "react-router-dom";
 import { Characteristic } from "../../CardProduct";
 import { Raiting } from "../../Raiting";
 import Select from "../../Select/Select";
@@ -19,7 +20,6 @@ function CategoryGoods() {
         <div className="column">
           <div className="description">Наименование товара</div>
           <Select
-            className="sort"
             isSearchable={false}
             placeholder={"Марка"}
             isClearable={false}
@@ -28,7 +28,6 @@ function CategoryGoods() {
             options={TEST}
           />
           <Select
-            className="sort"
             isSearchable={false}
             placeholder={"Модель"}
             isClearable={false}
@@ -96,9 +95,11 @@ function CategoryGoods() {
         </div>
       </div>
       <div className="btn-actoins">
-        <Button variant="primary" className="primary">
-          Далее
-        </Button>
+        <Link to="/add-product/delivery">
+          <Button variant="primary" className="primary">
+            Далее
+          </Button>
+        </Link>
       </div>
     </div>
   );

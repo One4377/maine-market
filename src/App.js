@@ -11,7 +11,12 @@ import {
   LegalPerson,
   LegalContact,
 } from "./components/Profile";
-import { AddProduct } from "./components/AddProduct";
+import {
+  AddProduct,
+  CategoryGoods,
+  Delivery,
+  Package,
+} from "./components/AddProduct";
 import { Wallet } from "./components/Wallet";
 import MainLayout from "./components/Layouts/Main";
 
@@ -29,7 +34,13 @@ function App() {
             <Route path="/legal-person" element={<LegalPerson />} />
             <Route path="/legal-contact" element={<LegalContact />} />
           </Route>
-          <Route path="/add-product" element={<AddProduct />} />
+
+          <Route path="/add-product" element={<AddProduct />}>
+            <Route path="/category-goods" element={<CategoryGoods />} />
+            <Route path="/delivery" element={<Delivery />} />
+            <Route path="/package" element={<Package />} />
+          </Route>
+
           <Route path="/wallet" element={<Wallet />} />
         </MainLayout>
         <Route path="/auth" element={<Auth />}>

@@ -8,7 +8,7 @@ import Button from "../../Button/Button";
 
 import MaineFerm from "./images/maine-ferm.png";
 
-function CardProductFull() {
+function CardProductFull({ buy }) {
   return (
     <div className="CardProductFull">
       <div className="top">
@@ -43,16 +43,18 @@ function CardProductFull() {
                 <Raiting />
               </div>
             </div>
-            <div className="column">
-              <div className="btn-wrapp">
-                <Button variant="primary" className="primary">
-                  Купить
-                </Button>
-                <Button variant="rate" className="rate">
-                  Предложить свою цену
-                </Button>
+            {buy && (
+              <div className="column">
+                <div className="btn-wrapp">
+                  <Button variant="primary" className="primary">
+                    Купить
+                  </Button>
+                  <Button variant="rate" className="rate">
+                    Предложить свою цену
+                  </Button>
+                </div>
               </div>
-            </div>
+            )}
           </div>
           <hr />
           <div className="parameter">
@@ -88,14 +90,16 @@ function CardProductFull() {
           </div>
         </div>
       </div>
-      <div className="btn-total">
-        <Button variant="rate" className="rate">
-          Предложить свою цену
-        </Button>
-        <Button variant="primary" className="primary">
-          Купить
-        </Button>
-      </div>
+      {buy && (
+        <div className="btn-total">
+          <Button variant="rate" className="rate">
+            Предложить свою цену
+          </Button>
+          <Button variant="primary" className="primary">
+            Купить
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,8 +1,9 @@
 import "./Package.scss";
 
+import { Link } from "react-router-dom";
+
 import Select from "../../Select/Select";
 import Button from "../../Button/Button";
-import { Link } from "react-router-dom";
 
 function Package() {
   const TEST = [
@@ -38,7 +39,7 @@ function Package() {
         <Link to="/add-product/delivery">
           <Button variant="blue ">Назад</Button>
         </Link>
-        <Link to="">
+        <Link to="/add-product/preview">
           <Button variant="primary" className="primary">
             Далее
           </Button>

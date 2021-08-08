@@ -16,6 +16,7 @@ import {
   CategoryGoods,
   Delivery,
   Package,
+  Preview, 
 } from "./components/AddProduct";
 import { Wallet } from "./components/Wallet";
 import MainLayout from "./components/Layouts/Main";
@@ -39,6 +40,7 @@ function App() {
             <Route path="/category-goods" element={<CategoryGoods />} />
             <Route path="/delivery" element={<Delivery />} />
             <Route path="/package" element={<Package />} />
+            <Route path="/preview" element={<Preview />} />
           </Route>
 
           <Route path="/wallet" element={<Wallet />} />

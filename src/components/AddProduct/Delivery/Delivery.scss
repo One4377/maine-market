@@ -41,22 +41,6 @@
     }
   }
 
-  .stock {
-    display: flex;
-    width: 100%;
-    height: 350px;
-
-    .information {
-      background: #2e2e2e;
-      border-radius: 2px;
-      padding: 20px 40px 20px 20px;
-
-      .address {
-        line-height: 25px;
-      }
-    }
-  }
-
   .btn-actoins {
     display: flex;
     justify-content: flex-end;

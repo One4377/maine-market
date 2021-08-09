@@ -16,13 +16,13 @@ export default function Aside() {
       </div>
       <hr />
       <div className="items">
-        <NavLink className="item" to="/add-product">
+        <NavLink className="item" to="/add-product/category-goods">
             Добавить товар
           </NavLink>
         <NavLink className="item" to="/catalog">
           Каталог
         </NavLink>
-        <NavLink className="item" to="/profile">
+        <NavLink className="item" to="/profile/person">
           Профиль
         </NavLink>
         {/* <NavLink className="item" to="#">

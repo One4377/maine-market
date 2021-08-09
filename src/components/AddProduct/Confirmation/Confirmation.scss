@@ -1,0 +1,49 @@
+.Confirmation {
+  .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    width: 620px;
+
+    input {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .сonsent {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+
+      .Checkbox {
+        margin-right: 10px;
+      }
+
+      .item {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 300;
+      }
+    }
+
+    .consent:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn-actoins {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+
+    .primary {
+      margin-left: 20px;
+    }
+  }
+}

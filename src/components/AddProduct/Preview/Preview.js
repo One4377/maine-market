@@ -66,7 +66,7 @@ function Preview() {
         <Link to="/add-product/package">
           <Button variant="blue ">Назад</Button>
         </Link>
-        <Link to="">
+        <Link to="/add-product/confirmation">
           <Button variant="primary" className="primary">
             Далее
           </Button>

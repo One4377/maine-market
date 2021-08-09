@@ -16,7 +16,8 @@ import {
   CategoryGoods,
   Delivery,
   Package,
-  Preview, 
+  Preview,
+  Confirmation,
 } from "./components/AddProduct";
 import { Wallet } from "./components/Wallet";
 import MainLayout from "./components/Layouts/Main";
@@ -41,6 +42,7 @@ function App() {
             <Route path="/delivery" element={<Delivery />} />
             <Route path="/package" element={<Package />} />
             <Route path="/preview" element={<Preview />} />
+            <Route path="/confirmation" element={<Confirmation />} />
           </Route>
 
           <Route path="/wallet" element={<Wallet />} />

@@ -57,10 +57,7 @@ function Wallet() {
             </div>
           </div>
           <div className="btn-actoins">
-            <Button
-              variant="primary"
-              className="primary"
-            >
+            <Button variant="primary" className="primary">
               Пополнить
             </Button>
           </div>

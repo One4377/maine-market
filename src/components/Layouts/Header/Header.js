@@ -20,12 +20,12 @@ export default function Header() {
         <SearchlIcon />
       </div>
       <div className="actions">
-        <Link to="">
+        <Link to="/auth/sign-up">
           <Button variant="primary" className="primary">
             Войти
           </Button>
         </Link>
-        <Link to="">
+        <Link to="/add-product/category-goods">
           <Button variant="blue ">Разместить объявление</Button>
         </Link>
       </div>

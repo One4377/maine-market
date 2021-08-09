@@ -20,4 +20,29 @@
   .icon {
     margin-right: 10px;
   }
+
+  .search {
+    width: 555px;
+    position: relative;
+
+    input {
+      width: 100%;
+    }
+
+    svg {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+    }
+  }
+
+  .actions {
+    .Button {
+      width: 200px;
+    }
+
+    .primary {
+      margin-right: 10px;
+    }
+  }
 }

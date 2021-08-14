@@ -1,0 +1,55 @@
+.Tracking {
+  .wrapp {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .title {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+
+    .status {
+      font-size: 12px;
+      background: #c18b01;
+      border-radius: 2px;
+      width: 150px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+    }
+  }
+
+  .description {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+
+  .Step {
+    background: none;
+  }
+
+  .info {
+    margin-top: 50px;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .add {
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-actoins {
+    display: flex;
+    justify-content: flex-end;
+
+    .primary {
+      margin-left: 20px;
+    }
+  }
+}

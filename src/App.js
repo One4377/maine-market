@@ -18,6 +18,8 @@ import {
   Package,
   Preview,
   Confirmation,
+  Tracking,
+  ReadyProduct
 } from "./components/AddProduct";
 import { Wallet } from "./components/Wallet";
 import MainLayout from "./components/Layouts/Main";
@@ -43,6 +45,8 @@ function App() {
             <Route path="/package" element={<Package />} />
             <Route path="/preview" element={<Preview />} />
             <Route path="/confirmation" element={<Confirmation />} />
+            <Route path="/tracking" element={<Tracking />} />
+            <Route path="/ready-product" element={<ReadyProduct />} />
           </Route>
 
           <Route path="/wallet" element={<Wallet />} />

@@ -32,7 +32,7 @@ function Confirmation() {
         <Link to="/add-product/preview">
           <Button variant="blue ">Назад</Button>
         </Link>
-        <Link to="">
+        <Link to="/add-product/tracking">
           <Button variant="primary" className="primary">
             Опубликовать
           </Button>

@@ -5,6 +5,7 @@
   height: 100%;
 
   &__content {
+    height: 100vh;
     width: calc(100% - 250px);
     margin-left: auto;
     flex: 1;

@@ -5,3 +5,5 @@ export { default as Delivery } from "./Delivery/Delivery";
 export { default as Package } from "./Package/Package";
 export { default as Preview } from "./Preview/Preview";
 export { default as Confirmation } from "./Confirmation/Confirmation";
+export { default as Tracking } from "./Tracking/Tracking";
+export { default as ReadyProduct } from "./ReadyProduct/ReadyProduct";

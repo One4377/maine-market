@@ -1,0 +1,228 @@
+.Table {
+  /* Make sure the inner table is always as wide as needed */
+  width: 100%;
+  border-spacing: 0;
+
+  .cell {
+    font-size: 10px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 1%; /* The secret sauce each cell should grow equally */
+
+    &.collapse {
+      width: 0.0000000001%; /* But "collapsed" cells should be as small as possible */
+    }
+  }
+
+  .heading {
+    .cell {
+      user-select: none;
+
+      .text {
+        margin-right: 6px;
+      }
+
+      &.isGrouped {
+        background: #393939;
+
+        .GroupIcon {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
+    .GroupBy {
+      margin-right: 6px;
+      padding: 0 4px;
+    }
+
+    .SortBy {
+      margin-left: auto;
+    }
+  }
+
+  .body {
+    .cell {
+      .expanded {
+        display: flex;
+        align-items: center;
+
+        svg {
+          transform: rotate(180deg);
+          margin-right: 5px;
+          width: 4px;
+          height: 12px;
+          margin-right: 10px;
+        }
+
+        &.isExpanded {
+          svg {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+
+      .sub-rows-length {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &.primary {
+    .heading {
+      margin-bottom: 10px;
+
+      .row {
+        .cell {
+          font-size: 8px;
+          padding: 6px 10px;
+          min-height: 28px;
+        }
+      }
+    }
+
+    .body {
+      .row {
+        margin-bottom: 4px;
+
+        .cell {
+          font-size: 10px;
+          padding: 6px 10px;
+        }
+      }
+    }
+  }
+
+  &.secondary {
+    background: #2e2e2e;
+    padding: 10px;
+
+    .heading {
+      margin-bottom: 20px;
+      background: #333333;
+
+      .row {
+        .cell {
+          font-size: 8px;
+          padding: 6px 10px;
+          min-height: 28px;
+        }
+      }
+    }
+
+    .body {
+      .row {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+        .cell {
+          font-size: 10px;
+          padding: 6px 10px;
+        }
+      }
+
+      .row:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &.nested {
+    .heading {
+      .row {
+        .cell {
+          font-size: 10px;
+          padding: 6px;
+          margin-right: 2px;
+        }
+      }
+    }
+
+    .body .row {
+      margin-top: 2px;
+
+      &.clickable {
+        cursor: pointer;
+      }
+
+      .cell {
+        font-size: 8px;
+        background-color: #2e2e2e;
+        margin-right: 2px;
+        min-height: 24px;
+      }
+    }
+  }
+
+  // .FilterButton {
+  //   margin-left: auto;
+
+  //   &.isOpen {
+  //     .Dropdown-button {
+  //       background-color: #3f3f3f;
+  //     }
+  //   }
+
+  //   .Dropdown-button {
+  //     padding: 0 8px;
+  //   }
+
+  //   .Dropdown-content {
+  //     padding: 0 10px;
+  //   }
+
+  //   .Checkbox {
+  //     position: relative;
+  //     padding-left: 25px;
+  //     cursor: pointer;
+  //     user-select: none;
+  //     white-space: nowrap;
+
+  //     &-input {
+  //       position: absolute;
+  //       opacity: 0;
+  //       cursor: pointer;
+  //       height: 0;
+  //       width: 0;
+
+  //       &:checked ~ .Checkbox-checkmark {
+  //         background-color: #282828;
+  //         border: 1px solid #3f3f3f;
+
+  //         &:after {
+  //           display: block;
+  //         }
+  //       }
+  //     }
+
+  //     &-checkmark {
+  //       position: absolute;
+  //       top: 0;
+  //       left: 0;
+  //       height: 16px;
+  //       width: 16px;
+  //       background-color: #3f3f3f;
+  //       border: 1px solid #3f3f3f;
+  //       border-radius: 2px;
+
+  //       &:after {
+  //         content: "";
+  //         position: absolute;
+  //         display: none;
+
+  //         left: 5px;
+  //         top: 2px;
+  //         width: 5px;
+  //         height: 8px;
+  //         border: solid white;
+  //         border-width: 0 2px 2px 0;
+  //         transform: rotate(45deg);
+  //       }
+  //     }
+
+  //     &:hover input ~ .Checkbox-checkmark {
+  //       background-color: #282828;
+  //     }
+  //   }
+  // }
+}

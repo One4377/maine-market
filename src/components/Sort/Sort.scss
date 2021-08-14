@@ -100,4 +100,39 @@
       }
     }
   }
+
+  .toggleGroup {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+    .view {
+      font-size: 12px;
+      margin-right: 15px;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      background: #353535;
+      border-radius: 2px;
+
+      .icon-toggle {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+      }
+
+      .icon-toggle:last-child {
+        margin-right: 0;
+        background: #14b0ba;
+        border-radius: 2px;
+      }
+    }
+  }
 }

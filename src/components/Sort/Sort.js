@@ -6,6 +6,8 @@ import Button from "../Button/Button";
 
 import { ReactComponent as SearchIcon } from "./images/search.svg";
 import { ReactComponent as CalendarIcon } from "./images/calendar.svg";
+import { ReactComponent as TableSortIcon } from "./images/table-sort.svg";
+import { ReactComponent as CartSortIcon } from "./images/cart-sort.svg";
 import Raiting from "../Raiting/Raiting";
 
 function Sort() {
@@ -77,6 +79,18 @@ function Sort() {
           <Button variant="primary" className="accept">
             Применить
           </Button>
+        </div>
+      </div>
+
+      <div className="toggleGroup">
+        <div className="view">Вид</div>
+        <div className="icons">
+          <div className="icon-toggle">
+            <TableSortIcon />
+          </div>
+          <div className="icon-toggle">
+            <CartSortIcon />
+          </div>
         </div>
       </div>
     </div>

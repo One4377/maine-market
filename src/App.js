@@ -19,10 +19,11 @@ import {
   Preview,
   Confirmation,
   Tracking,
-  ReadyProduct
+  ReadyProduct,
 } from "./components/AddProduct";
 import { Wallet } from "./components/Wallet";
 import MainLayout from "./components/Layouts/Main";
+import { ApplicationPage } from "./components/ApplicationPage";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
             <Route path="/ready-product" element={<ReadyProduct />} />
           </Route>
 
+          <Route path="/application-page" element={<ApplicationPage />} />
           <Route path="/wallet" element={<Wallet />} />
         </MainLayout>
         <Route path="/auth" element={<Auth />}>

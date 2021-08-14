@@ -17,8 +17,8 @@ export default function Aside() {
       <hr />
       <div className="items">
         <NavLink className="item" to="/add-product/category-goods">
-            Добавить товар
-          </NavLink>
+          Добавить товар
+        </NavLink>
         <NavLink className="item" to="/catalog">
           Каталог
         </NavLink>
@@ -26,11 +26,11 @@ export default function Aside() {
           Профиль
         </NavLink>
         {/* <NavLink className="item" to="#">
-            Мои товары
-          </NavLink>
-          <NavLink className="item" to="#">
-            Лист заявок
-          </NavLink> */}
+          Мои товары
+        </NavLink> */}
+        <NavLink className="item" to="/application-page">
+          Лист заявок
+        </NavLink>
         <NavLink className="item" to="/wallet">
           Кошелек
         </NavLink>

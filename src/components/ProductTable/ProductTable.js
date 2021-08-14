@@ -5,109 +5,112 @@ import { useMemo } from "react";
 function ProductTable() {
   const data = [
     {
-      Clients: "KS Finance",
-      entraceDiff: 12,
-      curDiff: 65,
-      margin: 34234,
-      avaliable: 12,
-      position: 535435,
+      Brand: "Bitmain",
+      Model: "AntMiner S9",
+      Hashrate: "13 TH/s",
+      Stock: "Moscow City",
+      Plaque: "1 340 ч",
+      DateOfManufacture: "12.05.2019",
+      Rating: 12345,
+      SalePrice: "$ 456,00",
     },
     {
-      Clients: "KS Finance",
-      entraceDiff: 12,
-      curDiff: 65,
-      margin: 34234,
-      avaliable: 12,
-      position: 535435,
+      Brand: "Bitmain",
+      Model: "AntMiner S9",
+      Hashrate: "13 TH/s",
+      Stock: "Moscow City",
+      Plaque: "1 340 ч",
+      DateOfManufacture: "12.05.2019",
+      Rating: 12345,
+      SalePrice: "$ 456,00",
     },
     {
-      Clients: "KS Finance",
-      entraceDiff: 12,
-      curDiff: 65,
-      margin: 34234,
-      avaliable: 12,
-      position: 535435,
+      Brand: "Bitmain",
+      Model: "AntMiner S9",
+      Hashrate: "13 TH/s",
+      Stock: "Moscow City",
+      Plaque: "1 340 ч",
+      DateOfManufacture: "12.05.2019",
+      Rating: 12345,
+      SalePrice: "$ 456,00",
     },
   ];
 
   const columns = useMemo(
     () => [
       {
-        Header: "Clients",
-        accessor: "Clients",
+        Header: "Марка",
+        accessor: "Brand",
         disableGroupBy: true,
         disableSortBy: true,
-        headerStyle: {
-          maxWidth: 166,
-          minWidth: 166,
-        },
+        headerStyle: {},
         cellStyle: {
-          maxWidth: 166,
-          minWidth: 166,
+          textDecoration: "underline",
         },
       },
       {
-        Header: "Entrace Diff %",
-        accessor: "entraceDiff",
+        Header: "Модель",
+        accessor: "Model",
         disableGroupBy: true,
         disableSortBy: true,
-        headerStyle: {
-          maxWidth: 80,
-        },
+        headerStyle: {},
         cellStyle: {
-          maxWidth: 80,
+          textDecoration: "underline",
         },
       },
       {
-        Header: "Cur. Diff",
-        accessor: "curDiff",
+        Header: "Хешрейт",
+        accessor: "Hashrate",
         disableGroupBy: true,
         disableSortBy: true,
-        headerStyle: {
-          maxWidth: 80,
-        },
+        headerStyle: {},
+        cellStyle: {},
+      },
+      {
+        Header: "Склад",
+        accessor: "Stock",
+        disableGroupBy: true,
+        disableSortBy: true,
+        headerStyle: {},
         cellStyle: {
-          maxWidth: 80,
+          textDecoration: "underline",
+          color: "rgba(255, 255, 255, 0.6)",
         },
       },
       {
-        Header: "Margin",
-        accessor: "margin",
+        Header: "Налет",
+        accessor: "Plaque",
         disableGroupBy: true,
         disableSortBy: true,
-        headerStyle: {
-          maxWidth: 80,
-        },
+        headerStyle: {},
+        cellStyle: {},
+      },
+      {
+        Header: "Дата производства",
+        accessor: "DateOfManufacture",
+        disableGroupBy: true,
+        disableSortBy: true,
+        headerStyle: {},
         cellStyle: {
-          maxWidth: 80,
+          color: "rgba(255, 255, 255, 0.6)",
         },
       },
       {
-        Header: "Avaliable",
-        accessor: "avaliable",
+        Header: "Рейтинг",
+        accessor: "Rating",
         disableGroupBy: true,
         disableSortBy: true,
-        headerStyle: {
-          maxWidth: 80,
-        },
-        cellStyle: {
-          maxWidth: 80,
-          color: "rgba(255, 255, 255, 0.4)",
-        },
+        headerStyle: {},
+        cellStyle: {},
       },
       {
-        Header: "Position",
-        accessor: "position",
+        Header: "Цена продажи",
+        accessor: "SalePrice",
         disableGroupBy: true,
         disableSortBy: true,
-        headerStyle: {
-          maxWidth: 80,
-          justifyContent: "flex-end",
-        },
+        headerStyle: {},
         cellStyle: {
-          maxWidth: 80,
-          display: "flex",
-          justifyContent: "flex-end",
+          color: "#14B0BA",
         },
       },
     ],
@@ -116,7 +119,7 @@ function ProductTable() {
 
   return (
     <div className="ProductTable">
-      <Table variant="nested" columns={columns} data={data} />
+      <Table columns={columns} data={data} />
     </div>
   );
 }

@@ -1,6 +1,5 @@
-import React from "react";
 import "./Sort.scss";
-
+import { useState } from "react";
 import Select from "../Select/Select";
 import Button from "../Button/Button";
 
@@ -11,6 +10,12 @@ import { ReactComponent as CartSortIcon } from "./images/cart-sort.svg";
 import Raiting from "../Raiting/Raiting";
 
 function Sort() {
+  const [isToggleGroup, setIsToggleGroup] = useState(false);
+
+  const toggleVisibleGroup = () => {
+    setIsToggleGroup(!isToggleGroup);
+  };
+
   const MARKET_OPTIONS = [
     { value: "bitmex_account", label: "Bitmex" },
     { value: "exante_account", label: "Exante" },
@@ -85,12 +90,12 @@ function Sort() {
       <div className="toggleGroup">
         <div className="view">Вид</div>
         <div className="icons">
-          <div className="icon-toggle">
+          <button className="icon-toggle" onClick={toggleVisibleGroup}>
             <TableSortIcon />
-          </div>
-          <div className="icon-toggle">
+          </button>
+          <button className="icon-toggle" >
             <CartSortIcon />
-          </div>
+          </button>
         </div>
       </div>
     </div>

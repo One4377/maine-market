@@ -10,7 +10,7 @@ function Catalog() {
   return (
     <div className="Catalog">
       <Sort />
-      {/* <ProductCatalog /> */}
+      <ProductCatalog />
       <ProductTable />
     </div>
   );

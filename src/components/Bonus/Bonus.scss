@@ -1,0 +1,12 @@
+.Bonus {
+  width: 325px;
+  height: 525px;
+  position: relative;
+
+  .primary {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    width: 286px;
+  }
+}

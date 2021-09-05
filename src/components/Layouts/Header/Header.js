@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="Header">
       <div className="logo">
-        <Link className="icon" to="/catalog">
+        <Link className="icon" to="/home">
           <HashratelIcon />
         </Link>
         Hashrate Distribution
@@ -19,6 +19,7 @@ export default function Header() {
         <input type="text" placeholder="Поиск" />
         <SearchlIcon />
       </div>
+
       <div className="actions">
         <Link to="/auth/sign-up">
           <Button variant="primary" className="primary">

@@ -1,0 +1,30 @@
+.Slider {
+  position: relative;
+  width: 1015px;
+  height: 525px;
+
+  .primary {
+    position: absolute;
+    left: 80px;
+    bottom: 80px;
+    width: 285px;
+  }
+
+  .previous {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}

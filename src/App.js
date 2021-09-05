@@ -24,12 +24,13 @@ import {
 import { Wallet } from "./components/Wallet";
 import MainLayout from "./components/Layouts/Main";
 import { ApplicationPage } from "./components/ApplicationPage";
+import { Home } from "./components/Home";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <MainLayout>
+        <MainLayout withAside>
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/card-product" element={<CardProductFull />} />
           <Route path="/profile" element={<Profile />}>
@@ -53,6 +54,11 @@ function App() {
           <Route path="/application-page" element={<ApplicationPage />} />
           <Route path="/wallet" element={<Wallet />} />
         </MainLayout>
+
+        <MainLayout>
+          <Route path="/home" element={<Home />} />
+        </MainLayout>
+
         <Route path="/auth" element={<Auth />}>
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />

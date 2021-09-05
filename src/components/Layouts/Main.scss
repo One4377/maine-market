@@ -6,13 +6,17 @@
 
   &__content {
     height: 100vh;
-    width: calc(100% - 250px);
-    margin-left: auto;
     flex: 1;
     display: flex;
     flex-direction: column;
     overflow: auto;
     background-color: #282828;
-    padding: 40px 20px;
+    padding: 40px;
+
+    &.withAside {
+      width: calc(100% - 250px);
+      margin-left: auto;
+      padding: 40px 20px;
+    }
   }
 }

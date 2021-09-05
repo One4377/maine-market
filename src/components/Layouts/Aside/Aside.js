@@ -1,15 +1,11 @@
 import "./Aside.scss";
-
 import { NavLink } from "react-router-dom";
-import AvatarIcon from "../images/avatar.png";
+import { User } from "../../User";
 
 export default function Aside() {
   return (
     <div className="Aside">
-      <div className="user">
-        <img src={AvatarIcon} alt="img" />
-        <div className="name">Savannah Nguyen</div>
-      </div>
+      <User />
       <div className="total">
         <div className="balance">Balance:</div>
         <div className="sum">$948.55</div>

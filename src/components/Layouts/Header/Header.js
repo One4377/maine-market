@@ -1,26 +1,49 @@
 import "./Header.scss";
 import { Link } from "react-router-dom";
 
-import { ReactComponent as HashratelIcon } from "../images/hashrate.svg";
-import { ReactComponent as SearchlIcon } from "../images/search.svg";
+import { ReactComponent as HashrateIcon } from "../images/hashrate.svg";
+import { ReactComponent as SearchIcon } from "../images/search.svg";
+import { ReactComponent as NotificationIcon } from "../images/notification.svg";
+import { ReactComponent as OrderIcon } from "../images/order.svg";
+import { ReactComponent as BasketIcon } from "../images/basket.svg";
 
 import Button from "../../Button/Button";
+import { User } from "../../User";
 
 export default function Header() {
   return (
     <header className="Header">
       <div className="logo">
         <Link className="icon" to="/home">
-          <HashratelIcon />
+          <HashrateIcon />
         </Link>
         Hashrate Distribution
       </div>
       <div className="search">
         <input type="text" placeholder="Поиск" />
-        <SearchlIcon />
+        <SearchIcon />
       </div>
 
-      <div className="actions">
+      <div className="interface">
+        <Link className="notification" to="">
+          <NotificationIcon />
+        </Link>
+
+        <div className="my-order">
+          <Link className="order" to="">
+            <OrderIcon />
+          </Link>
+          Мои заказы
+        </div>
+
+        <Link className="basket" to="">
+          <BasketIcon />
+        </Link>
+
+        <User />
+      </div>
+
+      {/* <div className="actions">
         <Link to="/auth/sign-up">
           <Button variant="primary" className="primary">
             Войти
@@ -29,7 +52,7 @@ export default function Header() {
         <Link to="/add-product/category-goods">
           <Button variant="blue ">Разместить объявление</Button>
         </Link>
-      </div>
+      </div> */}
     </header>
   );
 }

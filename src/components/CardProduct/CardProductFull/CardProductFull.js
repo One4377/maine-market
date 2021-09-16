@@ -1,14 +1,20 @@
-import React from "react";
-
 import "./CardProductFull.scss";
+import { useState } from "react";
 
 import { Characteristic } from "..";
 import { Raiting } from "../../Raiting";
 import Button from "../../Button/Button";
+import Modal from "../../Modal";
 
 import MaineFerm from "./images/maine-ferm.png";
 
 function CardProductFull({ buy }) {
+  const [isOpenTrade, setIsOpenTrade] = useState(false);
+  const [isAcceptTrade, setIsAcceptTrade] = useState(false);
+  const [isApprovedTrade, setIsApprovedTrade] = useState(false);
+
+  const toggleModal = () => setIsApprovedTrade(!isApprovedTrade);
+
   return (
     <div className="CardProductFull">
       <div className="top">
@@ -43,13 +49,13 @@ function CardProductFull({ buy }) {
                 <Raiting />
               </div>
             </div>
-            {buy && (
+            {!buy && (
               <div className="column">
                 <div className="btn-wrapp">
                   <Button variant="primary" className="primary">
                     Купить
                   </Button>
-                  <Button variant="rate" className="rate">
+                  <Button variant="rate" className="rate" onClick={toggleModal}>
                     Предложить свою цену
                   </Button>
                 </div>
@@ -90,7 +96,7 @@ function CardProductFull({ buy }) {
           </div>
         </div>
       </div>
-      {buy && (
+      {!buy && (
         <div className="btn-total">
           <Button variant="rate" className="rate">
             Предложить свою цену
@@ -99,6 +105,77 @@ function CardProductFull({ buy }) {
             Купить
           </Button>
         </div>
+      )}
+
+      {isOpenTrade && (
+        <Modal
+          className="Trade"
+          isOpen={isOpenTrade}
+          onClose={toggleModal}
+          title="Торговаться"
+        >
+          <div className="you-price">Предложить свою цену</div>
+          <div className="price">Текущая цена 24 888,80 ₽</div>
+          <input className="total" placeholder="₽" />
+          <textarea placeholder="Вы можете оставить комментарий" />
+          <Button variant="rate">Предложить свою цену</Button>
+        </Modal>
+      )}
+
+      {isAcceptTrade && (
+        <Modal
+          className="Accept-trade"
+          isOpen={isAcceptTrade}
+          onClose={toggleModal}
+          title="Торговаться"
+        >
+          <div className="price">Текущая цена 24 888,80 ₽</div>
+
+          <div className="сlient">
+            <div className="you-price">23 456,80 ₽</div>
+            <div className="info">Вы предложили цену</div>
+          </div>
+
+          <div className="seller">
+            <div className="you-price">23 456,80 ₽</div>
+            <div className="info">Вы предложили цену</div>
+
+            <div className="btn-actions">
+              <Button variant="rate">Отклонить</Button>
+              <Button variant="primary">Принять</Button>
+            </div>
+
+            <input className="total" placeholder="₽" />
+            <div className="different-price">
+              Вы можете предложить другую цену
+            </div>
+          </div>
+        </Modal>
+      )}
+
+      {isApprovedTrade && (
+        <Modal
+          className="Approve-trade"
+          isOpen={isApprovedTrade}
+          onClose={toggleModal}
+          title="Торговаться"
+        >
+          <div className="price">Текущая цена 24 888,80 ₽</div>
+
+          <div className="сlient">
+            <div className="you-price">23 456,80 ₽</div>
+            <div className="info">Вы предложили цену</div>
+          </div>
+
+          <div className="seller">
+            <div className="you-price">23 456,80 ₽</div>
+            <div className="info">Вы предложили цену</div>
+
+            <Button variant="primary">Принять</Button>
+
+            <div className="different-price">*цена действует 24 часа</div>
+          </div>
+        </Modal>
       )}
     </div>
   );

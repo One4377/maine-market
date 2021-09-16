@@ -4,6 +4,9 @@
   padding: 8px 16px;
   border-radius: 4px;
   height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.primary {
     background: #14b0ba;

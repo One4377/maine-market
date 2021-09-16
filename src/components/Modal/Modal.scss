@@ -1,0 +1,47 @@
+.Modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    background: #313131;
+    border-radius: 4px;
+    min-width: 310px;
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    background: #14b0ba;
+    height: 44px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+
+    .title {
+      flex: 1;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    button.close {
+      margin-left: auto;
+    }
+  }
+
+  .content {
+    padding: 20px 15px 20px 10px;
+  }
+}

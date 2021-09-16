@@ -10,7 +10,7 @@ function Preview() {
   return (
     <div className="Preview">
       <div className="title">Предварительный просмотр</div>
-      <CardProductFull />
+      <CardProductFull buy/>
       <hr />
       <div className="Information">
         <div className="title">Информация о доставке и упаковке</div>

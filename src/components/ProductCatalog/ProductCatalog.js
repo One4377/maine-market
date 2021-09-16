@@ -1,7 +1,4 @@
-import React from "react";
-
 import "./ProductCatalog.scss";
-
 import { Offer } from "./index";
 
 function ProductCatalog() {

@@ -1,11 +1,11 @@
 .Home {
-    
-    .Sliders {
-        display: flex;
-        align-items: center;
+  .Sliders {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 
-        .Slider {
-            margin-right: 20px;
-        }
+    .Slider {
+      margin-right: 20px;
     }
+  }
 }

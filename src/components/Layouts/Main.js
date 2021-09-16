@@ -5,7 +5,7 @@ import Aside from "./Aside/Aside";
 import Header from "./Header/Header";
 
 
-export default function MainLayout({ className, withAside, actionsButton }) {
+export default function MainLayout({ className, withAside }) {
   return (
     <div className={cx("MainLayout", className)}>
       {withAside && <Aside />}

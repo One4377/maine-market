@@ -34,6 +34,21 @@ function Offer({ heading }) {
           info={"Seller: AntMiner"}
           buy
         />
+        <CardProductMini
+          title={"Antminer S9j "}
+          info={"Seller: AntMiner"}
+          buy
+        />
+        <CardProductMini
+          title={"Antminer S9j "}
+          info={"Seller: AntMiner"}
+          buy
+        />
+        <CardProductMini
+          title={"Antminer S9j "}
+          info={"Seller: AntMiner"}
+          buy
+        />
       </div>
       <div className="more">
         <button className="info">Смотреть ещё</button>

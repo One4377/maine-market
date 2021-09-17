@@ -10,10 +10,9 @@ import MaineFerm from "./images/maine-ferm.png";
 
 function CardProductFull({ buy }) {
   const [isOpenTrade, setIsOpenTrade] = useState(false);
-  const [isAcceptTrade, setIsAcceptTrade] = useState(false);
-  const [isApprovedTrade, setIsApprovedTrade] = useState(false);
+  const toggleModal = () => setIsOpenTrade(!isOpenTrade);
 
-  const toggleModal = () => setIsApprovedTrade(!isApprovedTrade);
+  const [step, setStep] = useState(0);
 
   return (
     <div className="CardProductFull">
@@ -107,76 +106,79 @@ function CardProductFull({ buy }) {
         </div>
       )}
 
-      {isOpenTrade && (
-        <Modal
-          className="Trade"
-          isOpen={isOpenTrade}
-          onClose={toggleModal}
-          title="Торговаться"
-        >
-          <div className="you-price">Предложить свою цену</div>
-          <div className="price">Текущая цена 24 888,80 ₽</div>
-          <input className="total" placeholder="₽" />
-          <textarea placeholder="Вы можете оставить комментарий" />
-          <Button variant="rate">Предложить свою цену</Button>
-        </Modal>
-      )}
-
-      {isAcceptTrade && (
-        <Modal
-          className="Accept-trade"
-          isOpen={isAcceptTrade}
-          onClose={toggleModal}
-          title="Торговаться"
-        >
-          <div className="price">Текущая цена 24 888,80 ₽</div>
-
-          <div className="сlient">
-            <div className="you-price">23 456,80 ₽</div>
-            <div className="info">Вы предложили цену</div>
-          </div>
-
-          <div className="seller">
-            <div className="you-price">23 456,80 ₽</div>
-            <div className="info">Вы предложили цену</div>
-
-            <div className="btn-actions">
-              <Button variant="rate">Отклонить</Button>
-              <Button variant="primary">Принять</Button>
-            </div>
-
+      <Modal
+        isOpen={isOpenTrade}
+        onClose={toggleModal}
+        title="Торговаться"
+      >
+        {step === 0 && (
+          <div className="Trade">
+            <div className="you-price">Предложить свою цену</div>
+            <div className="price">Текущая цена 24 888,80 ₽</div>
             <input className="total" placeholder="₽" />
-            <div className="different-price">
-              Вы можете предложить другую цену
+            <textarea placeholder="Вы можете оставить комментарий" />
+            <Button variant="rate" onClick={() => setStep(1)}>
+              Предложить свою цену
+            </Button>
+          </div>
+        )}
+
+        {step === 1 && (
+          <div className="Accept-trade">
+            <div className="price">Текущая цена 24 888,80 ₽</div>
+
+            <div className="сlient">
+              <div className="you-price">23 456,80 ₽</div>
+              <div className="info">Вы предложили цену</div>
+            </div>
+
+            <div className="seller">
+              <div className="you-price">23 456,80 ₽</div>
+              <div className="info">Вы предложили цену</div>
+
+              <div className="btn-actions">
+                <Button variant="rate">Отклонить</Button>
+                <Button variant="primary" onClick={() => setStep(2)}>
+                  Принять
+                </Button>
+              </div>
+
+              <input className="total" placeholder="₽" />
+              <div className="different-price">
+                Вы можете предложить другую цену
+              </div>
             </div>
           </div>
-        </Modal>
-      )}
+        )}
 
-      {isApprovedTrade && (
-        <Modal
-          className="Approve-trade"
-          isOpen={isApprovedTrade}
-          onClose={toggleModal}
-          title="Торговаться"
-        >
-          <div className="price">Текущая цена 24 888,80 ₽</div>
+        {step === 2 && (
+          <div className="Approve-trade">
+            <div className="price">Текущая цена 24 888,80 ₽</div>
 
-          <div className="сlient">
-            <div className="you-price">23 456,80 ₽</div>
-            <div className="info">Вы предложили цену</div>
+            <div className="сlient">
+              <div className="you-price">23 456,80 ₽</div>
+              <div className="info">Вы предложили цену</div>
+            </div>
+
+            <div className="seller">
+              <div className="you-price">23 456,80 ₽</div>
+              <div className="info">Вы предложили цену</div>
+
+              <Button
+                variant="primary"
+                onClick={() => {
+                  setStep(0);
+                  toggleModal();
+                }}
+              >
+                Принять
+              </Button>
+
+              <div className="different-price">*цена действует 24 часа</div>
+            </div>
           </div>
-
-          <div className="seller">
-            <div className="you-price">23 456,80 ₽</div>
-            <div className="info">Вы предложили цену</div>
-
-            <Button variant="primary">Принять</Button>
-
-            <div className="different-price">*цена действует 24 часа</div>
-          </div>
-        </Modal>
-      )}
+        )}
+      </Modal>
     </div>
   );
 }

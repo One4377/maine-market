@@ -30,7 +30,7 @@ export default function Header() {
         </Link>
 
         <div className="my-order">
-          <Link className="order" to="">
+          <Link className="order" to="orders/completed">
             <OrderIcon />
           </Link>
           Мои заказы

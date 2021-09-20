@@ -25,6 +25,7 @@ import { Wallet } from "./components/Wallet";
 import MainLayout from "./components/Layouts/Main";
 import { ApplicationPage } from "./components/ApplicationPage";
 import { Home } from "./components/Home";
+import { Orders, Completed, Running, Cancelled  } from "./components/Orders";
 
 function App() {
   return (
@@ -57,6 +58,11 @@ function App() {
 
         <MainLayout>
           <Route path="/home" element={<Home />} />
+          <Route path="/orders" element={<Orders />}>
+            <Route path="/completed" element={<Completed />} />
+            <Route path="/running" element={<Running />} />
+            <Route path="/cancelled" element={<Cancelled />} />
+          </Route>
         </MainLayout>
 
         <Route path="/auth" element={<Auth />}>

@@ -10,6 +10,7 @@ import {
   Passport,
   LegalPerson,
   LegalContact,
+  Transaction,
 } from "./components/Profile";
 import {
   AddProduct,
@@ -40,6 +41,7 @@ function App() {
             <Route path="/passport" element={<Passport />} />
             <Route path="/legal-person" element={<LegalPerson />} />
             <Route path="/legal-contact" element={<LegalContact />} />
+            <Route path="/transaction" element={<Transaction />} />
           </Route>
 
           <Route path="/add-product" element={<AddProduct />}>

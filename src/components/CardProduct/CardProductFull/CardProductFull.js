@@ -106,11 +106,7 @@ function CardProductFull({ buy }) {
         </div>
       )}
 
-      <Modal
-        isOpen={isOpenTrade}
-        onClose={toggleModal}
-        title="Торговаться"
-      >
+      <Modal isOpen={isOpenTrade} onClose={toggleModal} title="Торговаться">
         {step === 0 && (
           <div className="Trade">
             <div className="you-price">Предложить свою цену</div>
@@ -137,7 +133,15 @@ function CardProductFull({ buy }) {
               <div className="info">Вы предложили цену</div>
 
               <div className="btn-actions">
-                <Button variant="rate">Отклонить</Button>
+                <Button
+                  variant="rate"
+                  onClick={() => {
+                    setStep(0);
+                    toggleModal();
+                  }}
+                >
+                  Отклонить
+                </Button>
                 <Button variant="primary" onClick={() => setStep(2)}>
                   Принять
                 </Button>

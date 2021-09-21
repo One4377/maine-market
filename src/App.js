@@ -26,7 +26,7 @@ import { Wallet } from "./components/Wallet";
 import MainLayout from "./components/Layouts/Main";
 import { ApplicationPage } from "./components/ApplicationPage";
 import { Home } from "./components/Home";
-import { Orders, Completed, Running, Cancelled  } from "./components/Orders";
+import { Orders, Completed, Running, Cancelled } from "./components/Orders";
 
 function App() {
   return (
@@ -35,12 +35,22 @@ function App() {
         <MainLayout withAside>
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/card-product" element={<CardProductFull />} />
+
           <Route path="/profile" element={<Profile />}>
+            <Route path="/person" element={<Person />} />
+          </Route>
+
+          <Route path="/legal-person" element={<Profile />}>
+            <Route path="/person" element={<Person />} />
+            <Route path="/legal" element={<LegalPerson />} />
+            <Route path="/legal-contact" element={<LegalContact />} />
+            <Route path="/transaction" element={<Transaction />} />
+          </Route>
+
+          <Route path="/physical-person" element={<Profile />}>
             <Route path="/person" element={<Person />} />
             <Route path="/about-user" element={<AboutUser />} />
             <Route path="/passport" element={<Passport />} />
-            <Route path="/legal-person" element={<LegalPerson />} />
-            <Route path="/legal-contact" element={<LegalContact />} />
             <Route path="/transaction" element={<Transaction />} />
           </Route>
 

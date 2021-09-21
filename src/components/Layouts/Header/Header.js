@@ -7,7 +7,6 @@ import { ReactComponent as NotificationIcon } from "../images/notification.svg";
 import { ReactComponent as OrderIcon } from "../images/order.svg";
 import { ReactComponent as BasketIcon } from "../images/basket.svg";
 
-import Button from "../../Button/Button";
 import { User } from "../../User";
 
 export default function Header() {

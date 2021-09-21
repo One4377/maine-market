@@ -1,13 +1,21 @@
 import "./Person.scss";
-
+import { useNavigate } from "react-router";
+import { useState } from "react";
 import Select from "../../Select/Select";
 import Button from "../../Button/Button";
 
 function Person() {
   const TYPE = [
-    { value: "juristic_party", label: "Юридическое" },
-    { value: "physical_person", label: "Физическое" },
+    { value: "legal-person", label: "Юридическое" },
+    { value: "physical-person", label: "Физическое" },
   ];
+
+  const [selectedType, setSelectedType] = useState();
+  const navigate = useNavigate();
+
+  const handdleOnChange = () => {
+    navigate(`/${selectedType.value}`);
+  };
 
   return (
     <div className="Person">
@@ -18,12 +26,12 @@ function Person() {
         isSearchable={false}
         placeholder={"Тип лица"}
         isClearable={false}
-        //   value={selectedMarket}
-        //   onChange={setSelectedMarket}
+        value={selectedType}
+        onChange={setSelectedType}
         options={TYPE}
       />
       <div className="btn-total">
-        <Button variant="primary" className="primary">
+        <Button variant="primary" className="primary" onClick={handdleOnChange}>
           Продолжить
         </Button>
       </div>
